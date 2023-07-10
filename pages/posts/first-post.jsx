@@ -35,7 +35,7 @@ export default function FirstPost() {
         <Link href="/">← Back to home</Link>
       </h2>
       <LikeButton />
-      <Outstndrs members={["so", "shu", "miya", "yuta", "iuto", "shopi"]} />
+      <Outstndrs members={["so", "shu", "miya", "yuta", "iuto", "shopi", ""]} />
     </Layout>
   );
 }
