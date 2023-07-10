@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import Link from 'next/link';
-import Layout from '../../components/layout';
+import Layout from '../../components/layout.jsx';
 import { useState } from 'react';
 
 function LikeButton() {
@@ -17,8 +17,8 @@ function LikeButton() {
 function Outstndrs({ members }) {
   return (
     <ul>
-      {members.map((member) => (
-        <li>{member}</li>
+      {members.map((member, index) => (
+        <li key={index}>{member}</li>
       ))}
     </ul>
   )
