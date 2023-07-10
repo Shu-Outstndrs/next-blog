@@ -15,13 +15,19 @@ function LikeButton() {
 }
 
 function Outstndrs({ members }) {
-  return (
+  if (members) {
+    return (
+      <ul>
+        {members.map((member, index) => (
+          <li key={index}>{member}</li>
+        ))}
+      </ul>
+    )
+  } else {
     <ul>
-      {members.map((member, index) => (
-        <li key={index}>{member}</li>
-      ))}
+      <li>No members found</li>
     </ul>
-  )
+  }
 }
 
 export default function FirstPost() {
@@ -35,7 +41,7 @@ export default function FirstPost() {
         <Link href="/">← Back to home</Link>
       </h2>
       <LikeButton />
-      <Outstndrs members={["so", "shu", "miya", "yuta", "iuto", "shopi", ""]} />
+      <Outstndrs members={["so", "shu", "miya"]} />
     </Layout>
   );
 }
