@@ -4,7 +4,6 @@ import Link from 'next/link';
 
 export default function Home() {
   return (
-    <Html lang="ja">
     <div className={styles.container}>
       <Head>
         <title>Create Next App</title>
@@ -114,6 +113,5 @@ export default function Home() {
         }
       `}</style>
     </div>
-    </Html>
   )
 }
